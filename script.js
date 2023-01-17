@@ -2,6 +2,9 @@ let list = document.getElementById('list');
 list.addEventListener('click', deleate); 
 document.addEventListener('DOMContentLoaded', loadGet); 
 const HTMLEL = document.documentElement;
+const toggle = document.getElementById('light');
+
+toggle.addEventListener('click', themeSwitch)
 
 function themeSwitch () {
     if (HTMLEL.dataset.theme === "light") {
@@ -66,8 +69,7 @@ function deleate(e) {
   let newarray = array.filter((value) => {
     return value !== selectedText
   })
-  
-console.log(newarray)
+
    localStorage.setItem('todo', JSON.stringify(newarray));
 }
 
