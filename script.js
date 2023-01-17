@@ -3,6 +3,12 @@ list.addEventListener('click', deleate);
 document.addEventListener('DOMContentLoaded', loadGet); 
 const HTMLEL = document.documentElement;
 const toggle = document.getElementById('light');
+let submit = document.getElementById('submit'); 
+
+submit.addEventListener('click', (e) => {
+  e.preventDefault();
+  addItem(); 
+})
 
 toggle.addEventListener('click', themeSwitch)
 
@@ -29,6 +35,7 @@ function loadGet () {
 
 // addes html elements && sends them to local storage
 function addItem () {
+
     let item = document.getElementById('item').value; 
     
     if (item === '') {
