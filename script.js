@@ -1,3 +1,12 @@
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("serviceWorker.js").then(registration => {
+    console.log(registration); 
+  }).catch(error => {
+    console.log(error)
+  })
+}
+
+
 let list = document.getElementById('list');
 const HTMLEL = document.documentElement;
 const toggle = document.getElementById('light');
