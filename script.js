@@ -1,7 +1,17 @@
 let list = document.getElementById('list');
 list.addEventListener('click', deleate); 
 document.addEventListener('DOMContentLoaded', loadGet); 
- 
+const HTMLEL = document.documentElement;
+
+function themeSwitch () {
+  if (HTMLEL.dataset.theme === "light") {
+    return HTMLEL.dataset.theme = "dark";
+  } else {
+    return HTMLEL.dataset.theme = "light";
+  }
+    
+}
+
 // popualtes the page with the local storag eitems once the page loads;
 function loadGet () {
     let current = JSON.parse(localStorage.getItem('todo')); 
