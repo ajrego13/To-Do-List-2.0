@@ -8,9 +8,15 @@
     "scope": ".",
     "icons": [
         {
-            "src": "icon.png",
-            "sizes": "512x512", 
+            "src": "ML.png",
+            "sizes": "500x500", 
             "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "facicon.ico",
+            "sizes": "48x48", 
+            "type": "ico",
             "purpose": "any"
         }
     ]
